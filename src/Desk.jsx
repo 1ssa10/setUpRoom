@@ -2,6 +2,7 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 import MacBook from "./MacBook";
 import Stand from "./Stand";
+import Wires from "./Wires";
 
 function Desk() {
   const { nodes } = useGLTF("./desk.glb");
@@ -56,6 +57,7 @@ function Desk() {
       >
         <meshStandardMaterial color={0x696969} />
       </mesh>
+      <Wires />
     </>
   );
 }
