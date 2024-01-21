@@ -3,6 +3,7 @@ import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
 import Desk from "./Desk";
 import Chair from "./chair";
 import { Perf } from "r3f-perf";
+import Mesh from "./Mesh";
 function Experience() {
   const { nodes } = useGLTF("./desk.glb");
 
@@ -14,26 +15,19 @@ function Experience() {
       <OrbitControls makeDefault />
       <directionalLight position={[1, 1, 1.5]} intensity={5} castShadow />
       <directionalLight position={[-3, 2, 0]} intensity={10} castShadow />
-      <group receiveShadow>
-        <mesh
-          geometry={nodes.Floor.geometry}
-          rotation={nodes.Floor.rotation}
-          position={nodes.Floor.position}
-          scale={nodes.Floor.scale}
-          castShadow
-          receiveShadow
-        >
-          <meshStandardMaterial color={"gray"} />
-        </mesh>
-        <mesh
-          geometry={nodes.Floor001.geometry}
-          position={nodes.Floor001.position}
-          rotation={nodes.Floor001.rotation}
-          scale={nodes.Floor001.scale}
-          receiveShadow
-        >
-          <meshStandardMaterial color={0x696969} />
-        </mesh>
+      <group>
+        <Mesh
+          obj={"Floor"}
+          color={"gray"}
+          castingShadow={true}
+          receivingShadow={true}
+        />
+        <Mesh
+          obj={"Floor001"}
+          color={"blackOlive"}
+          castingShadow={false}
+          receivingShadow={true}
+        />
       </group>
 
       <Desk />

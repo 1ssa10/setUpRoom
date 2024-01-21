@@ -21,15 +21,14 @@ function Mesh({
 }) {
   const { nodes } = useGLTF("./desk.glb");
 
-  console.log(materials);
   return (
     <>
       <mesh
         geometry={nodes[obj].geometry}
         material={materials[color]}
         position={props.positioning ? props.positioning : nodes[obj].position}
-        rotation={nodes[obj].rotation}
-        scale={nodes[obj].scale}
+        rotation={props.rotating ? props.rotating : nodes[obj].rotation}
+        scale={props.scaling ? props.scaling : nodes[obj].scale}
         castShadow={castingShadow}
         receiveShadow={receivingShadow}
       />

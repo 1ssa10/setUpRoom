@@ -1,40 +1,39 @@
 import { useGLTF } from "@react-three/drei";
 import React from "react";
+import Mesh from "./Mesh";
 
 function MacBook() {
   const { nodes } = useGLTF("./desk.glb");
   return (
     <>
       <group
-        position={nodes.Macbook.position}
-        rotation={nodes.Macbook.rotation}
-        scale={nodes.Macbook.scale}
+        position={[-1.4633598327636719, 0.6476100087165833, 1.4495141506195068]} //macbook position scale rotation from nodes
+        rotation={[2.5750828339942142, 1.0562338690467925, -2.6400630314879696]}
+        scale={[
+          0.015196993947029114, 0.015196996740996838, 0.015196995809674263,
+        ]}
       >
         {nodes.Macbook.children.map((object) =>
           object.name == "KeyboardKeyHole" ? (
-            <mesh
+            <Mesh
               key={object.uuid}
-              geometry={object.geometry}
-              position={object.position}
-              rotation={object.rotation}
-              scale={object.scale}
-            >
-              <meshStandardMaterial color={"gray"} />
-            </mesh>
+              obj={object.name}
+              color={"gray"}
+              castingShadow={false}
+              receivingShadow={false}
+            />
           ) : (
-            <mesh
+            <Mesh
               key={object.uuid}
-              geometry={object.geometry}
-              position={object.position}
-              rotation={object.rotation}
-              scale={object.scale}
-            >
-              <meshStandardMaterial color={"black"} />
-            </mesh>
+              obj={object.name}
+              color={"raisinBlack"}
+              castingShadow={false}
+              receivingShadow={false}
+            />
           )
         )}
         <mesh geometry={nodes.Macbook.geometry}>
-          <meshStandardMaterial color={"black"} />
+          <meshStandardMaterial color={0x3d3d3d} />
         </mesh>
       </group>
     </>

@@ -1,18 +1,15 @@
-import { useGLTF } from "@react-three/drei";
 import React from "react";
+import Mesh from "./Mesh";
 
 function Stand() {
-  const { nodes } = useGLTF("./desk.glb");
   return (
     <>
-      <mesh
-        geometry={nodes.Stand.geometry}
-        position={nodes.Stand.position}
-        rotation={nodes.Stand.rotation}
-        scale={nodes.Stand.scale}
-      >
-        <meshStandardMaterial color={"white"} />
-      </mesh>
+      <Mesh
+        obj={"Stand"}
+        color={"eerieBlack"}
+        castingShadow={false}
+        receivingShadow={false}
+      />
     </>
   );
 }

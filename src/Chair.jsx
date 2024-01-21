@@ -1,7 +1,6 @@
-import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
-import * as THREE from "three";
+
 import Mesh from "./Mesh";
 
 function Chair() {
@@ -21,14 +20,14 @@ function Chair() {
         <Mesh
           obj={"chiar"}
           color={"raisinBlack"}
-          castingShadow={true}
+          castingShadow={false}
           receivingShadow={false}
           positioning={[0, 0, 0]}
         />
         <Mesh
           obj={"chairhands"}
           color={"raisinBlack"}
-          castingShadow={true}
+          castingShadow={false}
           receivingShadow={false}
           positioning={[0, 0, 0]}
         />
@@ -36,7 +35,7 @@ function Chair() {
       <Mesh
         obj={"chairstand"}
         color={"darkLiver"}
-        castingShadow={true}
+        castingShadow={false}
         receivingShadow={false}
       />
     </>

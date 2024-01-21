@@ -1,10 +1,7 @@
-import { useGLTF } from "@react-three/drei";
 import React from "react";
 import Mesh from "./Mesh";
 
 function Wires() {
-  const { nodes } = useGLTF("./desk.glb");
-
   return (
     <>
       <Mesh
@@ -15,7 +12,7 @@ function Wires() {
       />
       <Mesh
         obj="wsle"
-        color={"onyx"}
+        color={"gray"}
         castingShadow={false}
         receivingShadow={false}
       />
@@ -27,7 +24,7 @@ function Wires() {
       />
       <Mesh
         obj={"charger"}
-        color={"eerieBlack"}
+        color={"darkLiver"}
         castingShadow={false}
         receivingShadow={false}
       />
