@@ -3,6 +3,8 @@ import MacBook from "./MacBook";
 import Stand from "./Stand";
 import Wires from "./Wires";
 import Mesh from "./Mesh";
+import Keyboard from "./keyboard";
+import Papers from "./Papers";
 
 function Desk() {
   return (
@@ -41,6 +43,8 @@ function Desk() {
         receivingShadow={false}
       />
       <Wires />
+      <Keyboard />
+      <Papers />
     </>
   );
 }

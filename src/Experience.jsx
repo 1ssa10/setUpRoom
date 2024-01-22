@@ -4,6 +4,8 @@ import Desk from "./Desk";
 import Chair from "./chair";
 import { Perf } from "r3f-perf";
 import Mesh from "./Mesh";
+import Bed from "./Bed";
+import Shelf from "./Shelf";
 function Experience() {
   const { nodes } = useGLTF("./desk.glb");
 
@@ -20,7 +22,7 @@ function Experience() {
           obj={"Floor"}
           color={"gray"}
           castingShadow={true}
-          receivingShadow={true}
+          receivingShadow={false}
         />
         <Mesh
           obj={"Floor001"}
@@ -32,6 +34,8 @@ function Experience() {
 
       <Desk />
       <Chair />
+      <Bed />
+      <Shelf />
     </>
   );
 }
