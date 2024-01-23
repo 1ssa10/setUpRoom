@@ -3,7 +3,7 @@ import MacBook from "./MacBook";
 import Stand from "./Stand";
 import Wires from "./Wires";
 import Mesh from "./Mesh";
-import Keyboard from "./keyboard";
+import Keyboard from "./Keyboard";
 import Papers from "./Papers";
 
 function Desk() {
