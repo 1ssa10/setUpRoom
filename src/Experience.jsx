@@ -1,7 +1,7 @@
 import React from "react";
 import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
 import Desk from "./Desk";
-import Chair from "./chair";
+import Chair from "./Chair";
 import { Perf } from "r3f-perf";
 import Mesh from "./Mesh";
 import Bed from "./Bed";
