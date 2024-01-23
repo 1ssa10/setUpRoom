@@ -7,10 +7,6 @@ import Mesh from "./Mesh";
 import Bed from "./Bed";
 import Shelf from "./Shelf";
 function Experience() {
-  const { nodes } = useGLTF("./desk.glb");
-
-  console.log(nodes);
-
   return (
     <>
       <Perf />
