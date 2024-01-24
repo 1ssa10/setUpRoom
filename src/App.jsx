@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Suspense } from "react";
 import "./App.css";
 import Experience from "./Experience";
 
@@ -19,7 +18,16 @@ function App() {
           position: [0, 1, 6],
         }}
       >
-        <Experience />
+        <Suspense
+          fallback={
+            <mesh scale={[2, 3, 2]}>
+              <boxGeometry args={[1, 1, 1, 2, 2, 2]} />
+              <meshBasicMaterial wireframe color="red" />
+            </mesh>
+          }
+        >
+          <Experience />
+        </Suspense>
       </Canvas>
     </>
   );
