@@ -27,7 +27,7 @@ function App() {
             </mesh>
           }
         >
-          <Physics debug>
+          <Physics>
             <Experience />
           </Physics>
         </Suspense>
