@@ -5,16 +5,19 @@ import Wires from "./Wires";
 import Mesh from "./Mesh";
 import Keyboard from "./Keyboard";
 import Papers from "./Papers";
+import { RigidBody } from "@react-three/rapier";
 
 function Desk() {
   return (
     <>
-      <Mesh
-        obj={"Desk001"}
-        color={"onyx"}
-        castingShadow={false}
-        receivingShadow={false}
-      />
+      <RigidBody>
+        <Mesh
+          obj={"Desk001"}
+          color={"onyx"}
+          castingShadow={false}
+          receivingShadow={false}
+        />
+      </RigidBody>
       <Mesh
         obj={"monitor"}
         color={"eerieBlack"}
