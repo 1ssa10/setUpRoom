@@ -29,7 +29,7 @@ function Papers() {
           position={nodes[papers.paperObj].position}
           rotation={nodes[papers.paperObj].rotation}
         >
-          <RigidBody colliders={"hull"} canSleep={false} ref={papers.bodyRef}>
+          <RigidBody colliders={"ball"} canSleep={false} ref={papers.bodyRef}>
             <Mesh
               obj={papers.paperObj}
               color={"gray"}

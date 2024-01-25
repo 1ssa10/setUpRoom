@@ -2,6 +2,7 @@ import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 
 import Mesh from "./Mesh";
+import { RigidBody } from "@react-three/rapier";
 
 function Chair() {
   const chairRef = useRef();
@@ -32,12 +33,14 @@ function Chair() {
           positioning={[0, 0, 0]}
         />
       </group>
-      <Mesh
-        obj={"chairstand"}
-        color={"darkLiver"}
-        castingShadow={false}
-        receivingShadow={false}
-      />
+      <RigidBody type="fixed" colliders={"hull"}>
+        <Mesh
+          obj={"chairstand"}
+          color={"darkLiver"}
+          castingShadow={false}
+          receivingShadow={false}
+        />
+      </RigidBody>
     </>
   );
 }

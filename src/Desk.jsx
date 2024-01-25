@@ -10,7 +10,7 @@ import { RigidBody } from "@react-three/rapier";
 function Desk() {
   return (
     <>
-      <RigidBody>
+      <RigidBody colliders={"trimesh"} type="fixed">
         <Mesh
           obj={"Desk001"}
           color={"onyx"}
