@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import "./App.css";
 import Experience from "./Experience";
+import { Physics } from "@react-three/rapier";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +27,9 @@ function App() {
             </mesh>
           }
         >
-          <Experience />
+          <Physics debug>
+            <Experience />
+          </Physics>
         </Suspense>
       </Canvas>
     </>
