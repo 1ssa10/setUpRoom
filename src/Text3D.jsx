@@ -13,7 +13,7 @@ function Text3D() {
           maxWidth={3}
           textAlign="center"
         >
-          Try Clicking on the book, maybe the papers too !!
+          Try Clicking on the books, maybe the papers too !!
         </Text>
       </Float>
     </>
