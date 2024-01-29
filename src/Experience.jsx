@@ -7,6 +7,7 @@ import Mesh from "./Mesh";
 import Bed from "./Bed";
 import Shelf from "./Shelf";
 import { RigidBody } from "@react-three/rapier";
+import Text3D from "./Text3D";
 
 function Experience() {
   const { nodes } = useGLTF("./desk.glb");
@@ -50,6 +51,7 @@ function Experience() {
       <Chair />
       <Bed />
       <Shelf />
+      <Text3D />
     </>
   );
 }

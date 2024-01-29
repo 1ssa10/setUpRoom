@@ -28,15 +28,16 @@ const BooksArray = () => {
 function Books() {
   const booksWithPapers = BooksArray();
 
-  const addImpulse = (index) => {
+  const addImpulse = (event, index) => {
     const impulse = { x: 0, y: 0.01, z: 0.01 };
     booksWithPapers[index].bodyRef.current.applyImpulse(impulse);
+    event.stopPropagation();
   };
 
   return (
     <>
       {booksWithPapers.map((pair, index) => (
-        <group key={index} onClick={() => addImpulse(index)}>
+        <group key={index} onClick={(e) => addImpulse(e, index)}>
           <RigidBody colliders="hull" ref={pair.bodyRef} canSleep={false}>
             <group>
               <Mesh
